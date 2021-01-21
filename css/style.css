@@ -432,6 +432,9 @@ header .menu nav {
     font-size: 0.9rem;
     font-weight: 500;
 }
+.services .service-col .service-lower .lower-image img {
+	width: 100%;
+}
 
 .services .service-col .service-lower small {
     color: #858585;
@@ -446,12 +449,9 @@ header .menu nav {
 
 .services .service-col .service-image {
     background: #0d0d0d;
-    min-height: 240px;
 }
 
-.services .service-col:first-child .service-image {
-    background: #d82400;
-}
+.services .service-col .service-image img { width: 100% }
 
 .services .service-col:last-child .service-image {
     height: 100%;
@@ -622,15 +622,13 @@ footer {
     }
 
     .meet .meet-col .bio {
-        width: 50%;
-        padding: 0 1rem 0 0;
+		padding: 0;
+        width: 0%;
     }
-
-    .meet .meet-col:last-child .bio {
-        width: 50%;
-        padding: 0 0 0 1rem;
-    }
-
+	.meet .meet-col .image {
+		width: 100%;
+	}
+	
     .services .service-col {
         width: 100%;
         max-width: 100%;
