@@ -53,7 +53,45 @@ header .menu nav {
     background: white;
     z-index: 999;
 }
+.video {
+	pointer-events: none;
+}
 
+header .menu.open i:before {
+	content: "\f00d";
+}
+
+header .menu nav {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 100px;
+	background: white;
+	z-index: 999;
+	padding: 2rem 2rem 0 2rem;
+}
+
+header .menu nav ul {
+	display: flex;
+	flex-direction: column;
+	text-align: right;
+	padding: 0;
+	margin: 0;
+}
+
+header .menu nav ul li {
+	margin-bottom: 2rem;
+}
+
+header .menu nav ul li a {
+	color: black;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-decoration: none;
+	letter-spacing: 4px;
+	text-align: right;
+	width: 100%;
+}
 .center {
     position: relative;
     max-width: 1200px;
@@ -628,7 +666,7 @@ footer {
 	.meet .meet-col .image {
 		width: 100%;
 	}
-	
+
     .services .service-col {
         width: 100%;
         max-width: 100%;
