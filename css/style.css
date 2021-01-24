@@ -27,6 +27,8 @@ header {
     height: 100px;
     background: #080808;
     border-bottom: 1px solid #1a1a1a;
+    position: relative;
+    z-index: 800;
 }
 
 header .center {
