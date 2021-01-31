@@ -53,6 +53,7 @@ if($validRequest) {
 	$subject = $db->EscapeQueryStmt($subject, true);
 
 	try {
+		$db = new DBCon();
 		$db->Link();
 		$db->Query("INSERT INTO Leads (FirstName, LastName, Phone, Email, Subject) VALUES ('{$firstName}', '{$lastName}', '{$phoneNumber}', '{$fromEmail}', '{$subject}');");
 	} catch(Exception $e) {
