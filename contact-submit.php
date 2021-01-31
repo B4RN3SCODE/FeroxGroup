@@ -68,7 +68,7 @@ if($validRequest) {
 		->setSubject($emailSubject)
 		->setFrom($emailFrom, 'Lead Site')
 		->setReplyTo('noreply@ferox.group', 'Mail Bot')
-		->setCc(['Collin' => 'collin@ferox.group', 'Brad' => 'brad@ferox.group'])
+		->setCc(['Collin' => 'collin@ferox.group', 'tyler' => 'tyler@ferox.group', 'Brad' => 'brad@ferox.group'])
 		->addGenericHeader('X-Mailer', 'PHP/' . phpversion())
 		->setHtml()
 		->setMessage($emailBody)
