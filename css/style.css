@@ -256,7 +256,7 @@ header .menu nav ul li a {
 }
 
 .who .who-col {
-    width: 50%;
+    width: 100%;
     padding-right: 3rem;
     padding-top: 3.5rem;
     padding-left: 3rem;
@@ -289,7 +289,7 @@ header .menu nav ul li a {
 }
 
 .who .who-col p {
-    max-width: 390px;
+    max-width: 100%;
     font-size: 0.9rem;
     color: #656565;
     line-height: 2rem;
@@ -323,7 +323,29 @@ header .menu nav ul li a {
 .who .who-numbers .label {
     margin-left: 1rem;
 }
+.who .verticals {
+    position: relative;
+    z-index: 800;
+}
+.who .service-cta {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.who .contact-cta a {
+    background: #d82400;
+    width: 25%;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    height: 80px;
+    margin-bottom: 4rem;
+}
 .meet h4 {
     padding-top: 5rem;
     padding-bottom: 3rem;
@@ -433,12 +455,6 @@ header .menu nav ul li a {
     margin: 0 1rem 0 0;
 }
 
-.services .service-col:last-child {
-    width: 100%;
-    margin-right: 0;
-    max-width: 100%;
-    position: relative;
-}
 
 .services .service-col .service-inner {
     padding-right: 1rem;
@@ -493,17 +509,6 @@ header .menu nav ul li a {
 
 .services .service-col .service-image img { width: 100% }
 
-.services .service-col:last-child .service-image {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-.services .service-col:last-child .service-image img {
-    right: -20px;
-    position: absolute;
-    top: 30px;
-}
 
 .services .service-overlay {
     position: absolute;
@@ -517,7 +522,7 @@ header .menu nav ul li a {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .services .service-cta a {
@@ -532,6 +537,8 @@ header .menu nav ul li a {
     height: 80px;
     margin-bottom: 4rem;
 }
+
+
 
 footer {
     border-top: 1px solid #1a1a1a;
@@ -652,6 +659,9 @@ footer {
         margin-right: 0;
         width: 50%;
     }
+    .who .contact-cta a {
+        width: 100%;
+    }
 
     .meet h4 {
         font-size: 1.5rem;
@@ -718,16 +728,6 @@ footer {
         margin: 0;
     }
 
-    .services .service-col:last-child .service-image {
-        width: 100%;
-        min-height: 300px;
-        margin-top: 4rem;
-    }
-
-    .services .service-col:last-child .service-image img {
-        right: 0;
-        width: 100%;
-    }
 
     .services .service-overlay {
         width: 80%;
