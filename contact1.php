@@ -33,16 +33,6 @@ $IS_MOBILE = $detect->isMobile();
 
 <body>
     <div class="content">
-        <div class="video">
-            <img class="intro mobile-only" src="./video/intro-mobile.gif">
-            <video class="intro desktop-only" width="auto" height="100%" autoplay muted>
-				<?php if($IS_MOBILE) { ?>
-                <source src="video/intro.mp4" type="video/mp4">
-                <?php } else { ?>
-				<source src="video/intro-desk.mp4" type="video/mp4">
-				<?php } ?>
-            </video>
-        </div>
         <header>
             <div class="center">
                 <div class="flex-row">
@@ -63,7 +53,7 @@ $IS_MOBILE = $detect->isMobile();
 									<a href="#services">Services</a>
 								</li>
 								<li>
-									<a href="#who">Contact Us</a>
+									<a href="#bottom">Contact Us</a>
 								</li>
 							</ul>
 						</nav>
