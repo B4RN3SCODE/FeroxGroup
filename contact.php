@@ -84,7 +84,7 @@ $IS_MOBILE = $detect->isMobile();
                 <p class="lead">Whatever <strong>your mission</strong>, we'll help you <strong>get it done</strong>.<br></p>
 
 
-                <form id="contact-form" method="post" action="contact.php" role="form">
+                <form id="contact-form" method="post" action="contact-submit.php" role="form">
 
                     <div class="messages"></div>
 
