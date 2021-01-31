@@ -37,14 +37,6 @@ if($fromEmail == "none" || $fromEmail == "none" || $fromEmail == "none" || $from
 
 if($validRequest) {
 
-	$emailSubject = $subjects[$subject];
-
-	$emailBody = "<h2>New FeroxGroup Lead</h2><br />";
-	$emailBody .= "<strong>First Name</strong>: {$firstName}<br />";
-	$emailBody .= "<strong>Last Name</strong>: {$lastName}<br />";
-	$emailBody .= "<strong>Phone</strong>: {$phoneNumber}<br />";
-	$emailBody .= "<strong>Email</strong>: {$fromEmail}<br />";
-	$emailBody .= "<strong>User Message:</strong>{$emailMessage}<br />";
 
 	try {
 		$db = new DBCon();
@@ -58,6 +50,17 @@ if($validRequest) {
 	} catch(Exception $e) {
 		// todo handle
 	}
+
+
+	$emailSubject = $subjects[$subject];
+
+	$emailBody = "<h2>New FeroxGroup Lead</h2><br />";
+	$emailBody .= "<strong>First Name</strong>: {$firstName}<br />";
+	$emailBody .= "<strong>Last Name</strong>: {$lastName}<br />";
+	$emailBody .= "<strong>Phone</strong>: {$phoneNumber}<br />";
+	$emailBody .= "<strong>Email</strong>: {$fromEmail}<br />";
+	$emailMessage = htmlentities($emailMessage);
+	$emailBody .= "<strong>User Message:</strong>{$emailMessage}<br />";
 
 
 	$mail = EmailSubmit::make()
