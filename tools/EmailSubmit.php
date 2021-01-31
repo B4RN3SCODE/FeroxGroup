@@ -49,7 +49,7 @@ class EmailSubmit
      */
     public static function make()
     {
-        return new SimpleMail();
+        return new EmailSubmit();
     }
 
     /**
