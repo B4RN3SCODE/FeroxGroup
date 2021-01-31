@@ -46,15 +46,14 @@ if($validRequest) {
 	$emailBody .= "<strong>Email</strong>: {$fromEmail}<br />";
 	$emailBody .= "<strong>User Message:</strong>{$emailMessage}<br />";
 
-	$firstName = $db->EscapeQueryStmt($firstName, true);
-	$lastName = $db->EscapeQueryStmt($lastName, true);
-	$fromEmail = $db->EscapeQueryStmt($fromEmail, true);
-	$phoneNumber = $db->EscapeQueryStmt($phoneNumber, true);
-	$subject = $db->EscapeQueryStmt($subject, true);
-
 	try {
 		$db = new DBCon();
 		$db->Link();
+		$firstName = $db->EscapeQueryStmt($firstName, true);
+		$lastName = $db->EscapeQueryStmt($lastName, true);
+		$fromEmail = $db->EscapeQueryStmt($fromEmail, true);
+		$phoneNumber = $db->EscapeQueryStmt($phoneNumber, true);
+		$subject = $db->EscapeQueryStmt($subject, true);
 		$db->Query("INSERT INTO Leads (FirstName, LastName, Phone, Email, Subject) VALUES ('{$firstName}', '{$lastName}', '{$phoneNumber}', '{$fromEmail}', '{$subject}');");
 	} catch(Exception $e) {
 		// todo handle
