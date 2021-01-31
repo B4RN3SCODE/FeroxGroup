@@ -46,8 +46,6 @@ if($validRequest) {
 	$emailBody .= "<strong>Email</strong>: {$fromEmail}<br />";
 	$emailBody .= "<strong>User Message:</strong>{$emailMessage}<br />";
 
-	$db = new DBCon();
-
 	$firstName = $db->EscapeQueryStmt($firstName, true);
 	$lastName = $db->EscapeQueryStmt($lastName, true);
 	$fromEmail = $db->EscapeQueryStmt($fromEmail, true);
