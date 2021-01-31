@@ -60,7 +60,7 @@ $IS_MOBILE = $detect->isMobile();
 									<a href="index.php#services">Services</a>
 								</li>
 								<li class="list-item">
-									<a href="index.php#bottom">Contact Us</a>
+									<a href="index.php#about">Contact Us</a>
 								</li>
 							</ul>
 						</nav>

@@ -63,7 +63,7 @@ $IS_MOBILE = $detect->isMobile();
 									<a href="#services">Services</a>
 								</li>
 								<li>
-									<a href="#who">Contact Us</a>
+									<a href="#about">Contact Us</a>
 								</li>
 							</ul>
 						</nav>
