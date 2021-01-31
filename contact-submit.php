@@ -128,13 +128,13 @@ if($validRequest) {
 									<a href="index.php#meet">Meet The Team</a>
 								</li>
 								<li class="list-item">
-									<a href="index.php#about">About Us</a>
-								</li>
-								<li class="list-item">
 									<a href="index.php#services">Services</a>
 								</li>
 								<li class="list-item">
 									<a href="index.php#about">Contact Us</a>
+								</li>
+								<li class="list-item">
+									<a href="about.php">About Us</a>
 								</li>
 							</ul>
 						</nav>
