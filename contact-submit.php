@@ -60,7 +60,7 @@ if($validRequest) {
 	}
 
 
-	$mail = SimpleMail::make()
+	$mail = EmailSubmit::make()
 		->setTo($toEmail, 'Brad Pokorny')
 		->setSubject($emailSubject)
 		->setFrom($emailFrom, 'Lead Site')
