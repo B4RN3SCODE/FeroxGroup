@@ -82,7 +82,7 @@ already understood self-sacrifice, loyalty, and commitment for the cause with an
 and work ethic. That is the premise behind Ferox Group. Give a group of highly skilled, highly intelligent
 individuals a task and have everyone facing the same direction and say go! With your idea and
 understanding of your product, what could stop you? We’re going to bet nothing.</h2>
-                        <a data-aos="fade-right" data-aos-delay="5300" href="#">Grow your business</a>
+                        <a data-aos="fade-right" data-aos-delay="5300" href="contact.php">Grow your business</a>
                     </div>
                     <div class="sphere" data-aos="fade-up" data-aos-delay="5400">
                         <img src="images/update/logo-sphere.png">
@@ -272,7 +272,7 @@ understanding of your product, what could stop you? We’re going to bet nothing
                     </div>
                 </div>
                 <div class="service-cta" data-aos="fade-up" data-aos-delay="100">
-                    <a href="#">Build your empire</a>
+                    <a href="contact.php">Build your empire</a>
                 </div>
                 <div class="text-bg">
                     <img src="images/text-services.svg">
@@ -297,7 +297,7 @@ understanding of your product, what could stop you? We’re going to bet nothing
                     <div class="v-three"></div>
                 </div>
                 <div class="contact-cta" data-aos="fade-up" data-aos-delay="100">
-                    <a href="#">Contact Us</a>
+                    <a href="contact.php">Contact Us</a>
                 </div>
             </div>
         </section>

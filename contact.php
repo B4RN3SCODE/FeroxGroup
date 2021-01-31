@@ -44,19 +44,22 @@ $IS_MOBILE = $detect->isMobile();
                         <img src="images/logo.png">
                     </div>
 					<div class="menu">
-						<i class="fal fa-bars"></i>
+						<i class="fal fa-bars" style="color:white;"></i>
 						<nav>
-							<ul>
-								<li>
+							<ul class="list-unstyled">
+								<li class="list-item">
+									<a href="index.php">Home</a>
+								</li>
+								<li class="list-item">
 									<a href="index.php#meet">Meet The Team</a>
 								</li>
-								<li>
+								<li class="list-item">
 									<a href="index.php#about">About Us</a>
 								</li>
-								<li>
+								<li class="list-item">
 									<a href="index.php#services">Services</a>
 								</li>
-								<li>
+								<li class="list-item">
 									<a href="index.php#bottom">Contact Us</a>
 								</li>
 							</ul>
@@ -88,17 +91,24 @@ $IS_MOBILE = $detect->isMobile();
                     <div class="controls">
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="form_name">Firstname *</label>
                                     <input id="form_name" type="text" name="name" class="form-control" placeholder="First name" required="required" data-error="Firstname is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="form_lastname">Lastname *</label>
                                     <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Last Name" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="form_phone">Phone *</label>
+                                    <input id="form_phone" type="text" name="phone" class="form-control" placeholder="123-456-7890" required="required" data-error="Phone Number is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -115,7 +125,7 @@ $IS_MOBILE = $detect->isMobile();
                                 <div class="form-group">
                                     <label for="form_need">Subject *</label>
                                     <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
-                                        <option value="0">Select From:</option>
+                                        <option value="">Select From:</option>
                                         <option value="1">General Inquiry</option>
                                         <option value="2">IT Development</option>
                                         <option value="3">Payment Processing</option>
