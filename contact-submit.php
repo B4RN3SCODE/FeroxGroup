@@ -14,7 +14,7 @@ $firstName = (isset($_REQUEST["name"]) && !empty($_REQUEST["name"])) ? $_REQUEST
 $lastName = (isset($_REQUEST["surname"]) && !empty($_REQUEST["surname"])) ? $_REQUEST["surname"] : "none";
 $phoneNumber = (isset($_REQUEST["phone"]) && !empty($_REQUEST["phone"])) ? $_REQUEST["phone"] : "none";
 $subject = (isset($_REQUEST["need"]) && !empty($_REQUEST["need"])) ? $_REQUEST["need"] : "none";
-
+$emailMessage = (isset($_REQUEST["message"]) && !empty($_REQUEST["message"])) ? $_REQUEST["message"] : "none";
 
 $subjects = array(
 	"1"	=> "General Inquiry",
@@ -31,7 +31,7 @@ $validRequest = true;
 
 $sendSuccess = false;
 
-if($fromEmail == "none" || $fromEmail == "none" || $fromEmail == "none" || $fromEmail == "none" || intval($subject) < 1 || intval($subject) > 7) {
+if($fromEmail == "none" || $fromEmail == "none" || $fromEmail == "none" || $fromEmail == "none" || $emailMessage == "none" || intval($subject) < 1 || intval($subject) > 7) {
 	$validRequest = false;
 }
 
@@ -44,7 +44,7 @@ if($validRequest) {
 	$emailBody .= "<strong>Last Name</strong>: {$lastName}<br />";
 	$emailBody .= "<strong>Phone</strong>: {$phoneNumber}<br />";
 	$emailBody .= "<strong>Email</strong>: {$fromEmail}<br />";
-
+	$emailBody .= "<strong>User Message:</strong>{$emailMessage}<br />";
 
 	$db = new DBCon();
 
