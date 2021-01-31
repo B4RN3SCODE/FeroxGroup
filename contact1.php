@@ -18,7 +18,11 @@ $IS_MOBILE = $detect->isMobile();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferox Group - Growing American Small Businesses</title>
     <!-- CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- CSS End -->
     <!-- Typefaces -->
@@ -44,16 +48,16 @@ $IS_MOBILE = $detect->isMobile();
 						<nav>
 							<ul>
 								<li>
-									<a href="#meet">Meet The Team</a>
+									<a href="index.php#meet">Meet The Team</a>
 								</li>
 								<li>
-									<a href="#about">About Us</a>
+									<a href="index.php#about">About Us</a>
 								</li>
 								<li>
-									<a href="#services">Services</a>
+									<a href="index.php#services">Services</a>
 								</li>
 								<li>
-									<a href="#bottom">Contact Us</a>
+									<a href="index.php#bottom">Contact Us</a>
 								</li>
 							</ul>
 						</nav>
@@ -64,23 +68,93 @@ $IS_MOBILE = $detect->isMobile();
         <section class="hero">
             <div class="center">
                 <div class="flex-row">
-                    <div class="headline">
-                        <h1 class="balboa" data-aos="fade-right" data-aos-delay="5100">EMPOWERING<br> AMERICAN <br>SMALL
-                            BUSINESS</h1>
-                        <h2 data-aos="fade-right" data-aos-delay="5100">Imagine what you could accomplish if you had a team of super intelligent, like-minded individuals that
-already understood self-sacrifice, loyalty, and commitment for the cause with an unprecedented drive
-and work ethic. That is the premise behind Ferox Group. Give a group of highly skilled, highly intelligent
-individuals a task and have everyone facing the same direction and say go! With your idea and
-understanding of your product, what could stop you? We’re going to bet nothing.</h2>
-                        <a data-aos="fade-right" data-aos-delay="5300" href="#">Grow your business</a>
-                    </div>
                     <div class="sphere" data-aos="fade-up" data-aos-delay="5400">
                         <img src="images/update/logo-sphere.png">
                     </div>
-                    <div class="growth-message"><!--
-                        <img src="./images/text-verticalgrowth.svg">
-                        -->
+<!------------------>
+            <div class="col-xl-8 offset-xl-2 py-5" style="position:relative;z-index:800;">
+
+                <h1>Contact
+                    <a href="https://ferox.group.com"><strong>FEROX GROUP</strong></a>
+                </h1>
+
+                <p class="lead">Whatever <strong>your mission</strong>, we'll help you <strong>get it done</strong>.<br></p>
+
+
+                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                    <div class="messages"></div>
+
+                    <div class="controls">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Firstname *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="First name" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Lastname *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Last Name" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="your@mission.com" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Subject *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                        <option value="0">Select From:</option>
+                                        <option value="1">General Inquiry</option>
+                                        <option value="2">IT Development</option>
+                                        <option value="3">Payment Processing</option>
+                                        <option value="4">Brand Strategy & Identity</option>
+                                        <option value="5">Establish Supply & Distro Networks</option>
+                                        <option value="6">Product to Market Strategy</option>
+                                        <option value="7">Growth Market Strategy</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Message *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="What's your mission?" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-send" value="Submit">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> These fields are required.
+                            </div>
+                        </div>
                     </div>
+
+                </form>
+
+            </div>
+            <!-- /.8 -->
+
+
+<!------------------->
                 </div>
                 <div class="verticals">
                     <div class="v-one"></div>
@@ -91,208 +165,6 @@ understanding of your product, what could stop you? We’re going to bet nothing
                 </div>
             </div>
         </section>
-
-        <section id="meet" class="meet">
-            <div class="center">
-                <h4 class="balboa" data-aos="fade-up">Meet Your Team</h4>
-                <div class="flex-row">
-                    <div class="meet-col">
-						<div class="bio"></div>
-                        <div class="image">
-                            <div class="image-box" data-aos="fade-up">
-                                <img src="./images/team-bradp.png">
-                            </div>
-                            <h3 data-aos="fade-right" class="balboa">Bradley Pokorny</h3>
-                            <div class="bullets" data-aos="fade-up">
-                                <ul class="mono">
-                                    <li>Chief Executive Officer</li>
-                                    <li>82nd Airborne Division</li>
-                                    <li>OIF / OEF</li>
-                                    <li>MBA, Syracuse University</li>
-                                    <li>Growth Market Strategy, Cornell University</li>
-                                    <li style="visibility: hidden;"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="meet-col">
-                        <div class="image">
-                            <div class="image-box" data-aos="fade-up" data-aos-delay="100">
-                                <img src="./images/team-collins.png">
-                            </div>
-                            <h3 data-aos="fade-right" class="balboa">Collin Snyder</h3>
-                            <div class="bullets" data-aos="fade-up" data-aos-delay="100">
-                                <ul class="mono">
-                                    <li>Chief Creative Officer</li>
-                                    <li>75th Ranger Regiment</li>
-                                    <li>OIF / OEF</li>
-                                    <li>Media, Arts, & Animation</li>
-                                    <li>UX / UI Design</li>
-                                    <li>Art Institute of Houston</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-row">
-                    <div class="meet-col">
-						<div class="bio"></div>
-                        <div class="image">
-                            <div class="image-box" data-aos="fade-up">
-                                <img src="./images/team-tylerb.jpg">
-                            </div>
-                            <h3 data-aos="fade-right" class="balboa">Tyler Barnes</h3>
-                            <div class="bullets" data-aos="fade-up">
-                                <ul class="mono">
-                                    <li>Chief Information Officer</li>
-                                    <li>USMC</li>
-                                    <li>OIF / OEF</li>
-                                    <li>Humanoid Robot</li>
-                                    <li>Too smart for school</li>
-                                    <li style="visibility: hidden;"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="meet-col">
-                        <div class="image">
-                            <div class="image-box" data-aos="fade-up" data-aos-delay="100">
-                                <img src="./images/team-ashleym.jpg">
-                            </div>
-                            <h3 data-aos="fade-right" class="balboa">Ashley Matthews</h3>
-                            <div class="bullets" data-aos="fade-up" data-aos-delay="100">
-                                <ul class="mono">
-                                    <li>Chief Financial Officer</li>
-                                    <li>Business Finance</li>
-                                    <li>Texas State University</li>
-                                    <li style="visibility: hidden;"></li>
-                                    <li style="visibility: hidden;"></li>
-                                    <li style="visibility: hidden;"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-bg">
-                    <img src="images/text-yourteam.svg">
-                </div>
-                <div class="verticals">
-                    <div class="v-one"></div>
-                    <div class="v-two"></div>
-                    <div class="v-three"></div>
-                    <div class="v-four"></div>
-                    <div class="v-five"></div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="services" class="services">
-            <div class="center">
-                <h4 class="balboa" data-aos="fade-right">Services</h4>
-                <div class="service-box" data-aos="fade-up">
-                    <div class="flex-row">
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up">
-                                <div class="service-image">
-                                    <img src="images/update/itdev.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">IT Development</h5>
-                                    <p>Build and deploy powerful, intelligent, affordable business solutions.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up" data-aos-delay="100">
-                                <div class="service-image">
-                                    <img src="images/update/paymentprocessing.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">Payment Processing (FeroxPay)</h5>
-                                    <p>Accept all common payment types, even as a high-risk merchant.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up" data-aos-delay="200">
-                                <div class="service-image">
-                                    <img src="images/update/brandid.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">Brand Strategy & Identity</h5>
-                                    <p>Attract fiercely loyal customers & differentiate your business with powerful visuals.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up">
-                                <div class="service-image">
-                                    <img src="images/update/supply.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">Establish Supply & Distro Networks</h5>
-                                    <p>Solidify your resources & grow your reach.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up">
-                                <div class="service-image">
-                                    <img src="images/update/ProductToMarketStrat.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">Product to Market Strategy</h5>
-                                    <p>Establish an end-to-end vision & roadmap for your product or service.</p>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="service-col">
-                            <div class="service-inner" data-aos="fade-up">
-                                <div class="service-image">
-                                    <img src="images/update/GrowthMarketStartegy.jpg">
-                                </div>
-                                <span>
-                                    <h5 class="balboa">Growth Market Strategy</h5>
-                                    <p>Achieve higher levels of market share with a comprehensive plan of action.</p>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="service-cta" data-aos="fade-up" data-aos-delay="100">
-                    <a href="#">Build your empire</a>
-                </div>
-                <div class="text-bg">
-                    <img src="images/text-services.svg">
-                </div>
-            </div>
-        </section>
-
-
-
-		<section id="about" class="who">
-            <div class="center">
-                <div class="flex-row">
-                    <div class="who-col">
-                        <h3 data-aos="fade-right" class="aos-init aos-animate"><br>Whatever <strong>your mission</strong>, we'll help you <strong>get it done</strong>.<br></h3>
-                        <p data-aos="fade-right" class="aos-init aos-animate">As a veteran- and active duty owned-business, we know how to work toward a shared vision.<br>Ready to team up?</p>
-                    </div>
-                </div>
-                <div class="text-bg">
-                    <img src="images/update/contactus.svg">
-                </div>
-                <div class="verticals">
-                    <div class="v-three"></div>
-                </div>
-                <div class="contact-cta" data-aos="fade-up" data-aos-delay="100">
-                    <a href="#">Contact Us</a>
-                </div>
-            </div>
-        </section>
-
-
 
 
         <footer>
@@ -319,8 +191,7 @@ understanding of your product, what could stop you? We’re going to bet nothing
             setTimeout(
                 function () {
                     $('body').addClass('scroll');
-                    $('.video').width("1px").height("1px");
-                }, 5000);
+                }, 100);
 
         });
     $("document").ready(function () {
