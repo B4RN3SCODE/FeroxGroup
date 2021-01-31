@@ -56,7 +56,7 @@ if($validRequest) {
 
 	try {
 		$db->Query("INSERT INTO Leads (FirstName, LastName, Phone, Email, Subject) VALUES ('{$firstName}', '{$lastName}', '{$phoneNumber}', '{$fromEmail}', '{$subject}');");
-	} catch($e) {
+	} catch(Exception $e) {
 		// todo handle
 	}
 
