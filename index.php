@@ -35,7 +35,7 @@ $IS_MOBILE = $detect->isMobile();
     <div class="content">
         <div class="video">
             <img class="intro mobile-only" src="./video/intro-mobile.gif">
-            <video class="intro desktop-only" width="auto" height="100%" autoplay muted>
+            <video id="vid-main" class="intro desktop-only" width="auto" style="display: none;" height="100%" autoplay muted>
 				<?php if($IS_MOBILE) { ?>
                 <source src="video/intro.mp4" type="video/mp4">
                 <?php } else { ?>
@@ -324,8 +324,27 @@ understanding of your product, what could stop you? We’re going to bet nothing
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script>
-        $("document").ready(function () {
+    function setCookie(key, value, expiry) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
 
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+
+    function eraseCookie(key) {
+        var keyValue = getCookie(key);
+        setCookie(key, keyValue, '-1');
+    }		
+        $("document").ready(function () {
+			if(getCookie("vidPlayed") != "played") {
+				$("#vid-main").show();
+				setCookie("vidPlayed", "played", '3');
+			}
+			
             setTimeout(
                 function () {
                     $('body').addClass('scroll');
