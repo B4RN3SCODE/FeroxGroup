@@ -328,6 +328,8 @@ understanding of your product, what could stop you? We’re going to bet nothing
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
     <script>
+///////////////////		COOKIE
+    
     function setCookie(key, value, expiry) {
         var expires = new Date();
         expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
@@ -342,7 +344,11 @@ understanding of your product, what could stop you? We’re going to bet nothing
     function eraseCookie(key) {
         var keyValue = getCookie(key);
         setCookie(key, keyValue, '-1');
-    }		
+    }
+///////////////////		/COOKIE
+    
+    
+        $("document").ready(function () {
             setTimeout(
                 function () {
                     $('body').addClass('scroll');
@@ -350,6 +356,7 @@ understanding of your product, what could stop you? We’re going to bet nothing
                 }, 5000);
 
         });
+        
     $("document").ready(function () {
         $(".menu i").click(function () {
             $(".menu").toggleClass("open");
