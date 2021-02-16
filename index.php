@@ -33,7 +33,7 @@ $SHOW_VIDEO = !isset($_COOKIE["vidPlayed"]) && $_COOKIE["vidPlayed"] != "played"
     <!-- FontAwesome End -->
 </head>
 
-<body>
+<body data-vp="<?php echo $SHOW_VIDEO; ?>">
     <div class="content">
 		<?php if($SHOW_VIDEO) { ?>
         <div class="video">
