@@ -38,7 +38,7 @@ $SHOW_VIDEO = (!isset($_COOKIE["vidPlayed"]) && $_COOKIE["vidPlayed"] != "played
 		<?php if($SHOW_VIDEO) { ?>
         <div class="video">
             <img class="intro mobile-only" src="./video/intro-mobile.gif">
-            <video id="vid-main" class="intro desktop-only" width="auto" style="display: none;" height="100%" autoplay muted>
+            <video class="intro desktop-only" width="auto" height="100%" autoplay muted>
 				<?php if($IS_MOBILE) { ?>
                 <source src="video/intro.mp4" type="video/mp4">
                 <?php } else { ?>
@@ -333,7 +333,7 @@ understanding of your product, what could stop you? We’re going to bet nothing
     function setCookie(key, value, expiry) {
         var expires = new Date();
         expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
-        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString() + '; Secure';
     }
 
     function getCookie(key) {
