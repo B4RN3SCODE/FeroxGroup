@@ -347,8 +347,12 @@ understanding of your product, what could stop you? We’re going to bet nothing
     }
 ///////////////////		/COOKIE
     
-    
         $("document").ready(function () {
+			
+			if(getCookie("vidPlayed") != "played") {
+				setCookie("vidPlayed", "played", 3);
+			}
+			
             setTimeout(
                 function () {
                     $('body').addClass('scroll');
