@@ -8,7 +8,7 @@ $detect = new Mobile_Detect;
 $IS_MOBILE = $detect->isMobile();
 
 
-$SHOW_VIDEO = !isset($_COOKIE["vidPlayed"]) && $_COOKIE["vidPlayed"] != "played";
+$SHOW_VIDEO = (!isset($_COOKIE["vidPlayed"]) && $_COOKIE["vidPlayed"] != "played");
 
 ?>
 
