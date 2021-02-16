@@ -8,6 +8,8 @@ $detect = new Mobile_Detect;
 $IS_MOBILE = $detect->isMobile();
 
 
+$SHOW_VIDEO = !isset($_COOKIE["vidPlayed"]) && $_COOKIE["vidPlayed"] != "played";
+
 ?>
 
 <!DOCTYPE html>
@@ -33,6 +35,7 @@ $IS_MOBILE = $detect->isMobile();
 
 <body>
     <div class="content">
+		<?php if($SHOW_VIDEO) { ?>
         <div class="video">
             <img class="intro mobile-only" src="./video/intro-mobile.gif">
             <video id="vid-main" class="intro desktop-only" width="auto" style="display: none;" height="100%" autoplay muted>
@@ -43,6 +46,7 @@ $IS_MOBILE = $detect->isMobile();
 				<?php } ?>
             </video>
         </div>
+        <?php } ?>
         <header>
             <div class="center">
                 <div class="flex-row">
@@ -339,12 +343,6 @@ understanding of your product, what could stop you? We’re going to bet nothing
         var keyValue = getCookie(key);
         setCookie(key, keyValue, '-1');
     }		
-        $("document").ready(function () {
-			if(getCookie("vidPlayed") != "played") {
-				$("#vid-main").show();
-				setCookie("vidPlayed", "played", '3');
-			}
-			
             setTimeout(
                 function () {
                     $('body').addClass('scroll');
